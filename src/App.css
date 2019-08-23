@@ -23,6 +23,21 @@
   color: #61dafb;
 }
 
+.post-card {
+  border: 1.25px solid #61dafb;
+  box-shadow: 5px 10px #61dafb;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+body {
+  line-height: 25px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -31,3 +46,4 @@
     transform: rotate(360deg);
   }
 }
+
