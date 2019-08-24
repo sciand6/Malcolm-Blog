@@ -1,11 +1,12 @@
-.App {
-  text-align: center;
+body {
+  line-height: 20px;
+  background-color: #cafafe;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: center;
+  
+
 }
 
 .App-header {
@@ -24,26 +25,43 @@
 }
 
 .post-card {
-  border: 1.25px solid #61dafb;
+  border: 2.25px solid #61dafb;
   box-shadow: 5px 10px #61dafb;
   margin-top: 15px;
   margin-bottom: 15px;
+  border-radius: 10px;
 }
 
 .card-title {
     font-weight: bold;
 }
 
-body {
-  line-height: 25px;
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #242582;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+.navbar li:last-child {
+  float: right;
 }
 

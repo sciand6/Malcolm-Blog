@@ -7,7 +7,7 @@ class Posts extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('http://localhost:4000/posts')
             .then(data => {
                 console.log(data);
                 this.setState({
@@ -24,7 +24,7 @@ class Posts extends Component {
                 <div className="post-card" key={post.id}>
                     <div className="card-content">
                         <span className="card-title">{post.title}</span>
-                        <p>{post.body}</p>
+                        <p>{post.content}</p>
                     </div>
                 </div>
                 );
@@ -35,7 +35,6 @@ class Posts extends Component {
 
         return (
             <div className="container">
-                <h1>Posts</h1>
                 {postList}
             </div>
         );
