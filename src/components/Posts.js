@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class Posts extends Component {
@@ -21,10 +22,10 @@ class Posts extends Component {
         const postList = posts.length ? (
             posts.map(post => {
                 return (
-                <div className="post-card" key={post.id}>
+                <div className="post-card" key={post._id}>
                     <div className="card-content">
-                        <span className="card-title">{post.title}</span>
-                        <p>{post.content}</p>
+                        <span className="card-title"><Link to={`/posts/${post._id}`}>{post.title}</Link></span>
+                        <p>{post.content.slice(0, 200) + "..."}</p>
                     </div>
                 </div>
                 );

@@ -1,27 +1,7 @@
 body {
   line-height: 20px;
-  background-color: #cafafe;
-}
-
-.App {
+  background-color: #ffffff;
   text-align: center;
-  
-
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .post-card {
@@ -49,7 +29,7 @@ body {
   float: left;
 }
 
-.navbar li a {
+.navbar li {
   display: block;
   color: white;
   text-align: center;
@@ -57,11 +37,17 @@ body {
   text-decoration: none;
 }
 
-.navbar li a:hover {
+.navbar li:hover {
   background-color: #111;
 }
 
-.navbar li:last-child {
-  float: right;
+.navHeader {
+  float: right !important;
+  font-weight: bold !important;
+  font-size: 25px;
+}
+
+.navHeader:hover {
+  background-color: transparent !important;
 }
 
