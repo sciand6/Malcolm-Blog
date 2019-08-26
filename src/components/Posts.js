@@ -24,7 +24,7 @@ class Posts extends Component {
                 <div className="post-card" key={post._id}>
                     <div className="card-content">
                         <span className="card-title"><Link to={`/posts/${post._id}`}>{post.title}</Link></span>
-                        <p>{post.content.slice(0, 200) + "..."}</p>
+                        <p dangerouslySetInnerHTML={{__html: post.content.slice(0, 150) + "..."}}></p>
                     </div>
                 </div>
                 );
