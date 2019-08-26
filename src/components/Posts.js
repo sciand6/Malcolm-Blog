@@ -10,7 +10,6 @@ class Posts extends Component {
     componentDidMount() {
         axios.get('http://localhost:4000/posts')
             .then(data => {
-                console.log(data);
                 this.setState({
                     posts: data.data.slice(0, 10)
                 })
