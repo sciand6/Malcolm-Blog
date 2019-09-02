@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-// It works for now, may need to make some changes later
-
 class PostDisplay extends Component {
     constructor(props) {
         super(props);
+        // Setting an initial state in case of no posts
         this.state = {
             title: '',
             content: '',
@@ -15,23 +14,20 @@ class PostDisplay extends Component {
     }
 
     componentDidMount() {
+        // Get post by id
         axios.get(`http://localhost:4000/posts/${this.props.match.params.id}`)
-            .then(data => {
-                data.data.map(data => {
-                    if (data._id === this.props.match.params.id) {
-                        this.setState({
-                            title: data.title,
-                            content: data.content,
-                            author: data.author,
-                            postDate: data.postDate
-                            
-                        });
-                    }
+            .then(post => {
+                this.setState({ // Still thinking about how I can just reduce this down to just this: 'this.setState({ post.data });'
+                    title: post.data.title,
+                    content: post.data.content,
+                    author: post.data.author,
+                    postDate: post.data.postDate
                 })
             }); 
     }
 
     render() {
+        // Rendering the posting here
         let posting = this.state;
         return (
             <div className="container">
