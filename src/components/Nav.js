@@ -13,7 +13,7 @@ function Nav() {
           <Link to="/posts">
             <li>Posts</li>
           </Link>
-          <li className="navHeader">Malcolm Programming</li>
+          <li className="navHeader">Malcolm's Blog: Tech | Growth</li>
         </ul>
       </div>
     </div>
