@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import DOMPurify from "../dompurify";
 
 class PostDisplay extends Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class PostDisplay extends Component {
             <div className="container">
                 <h2>{title}</h2>
                 <p>Posted by <strong>{author}</strong> on: <em>{postDate}</em></p>
-                <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}></div>
             </div>
         );
     }
